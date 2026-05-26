@@ -24,7 +24,11 @@ public class MidtermPractice {
         words.put("brilliant", 99);
         words.put("world", 15);
         words.put("amazing", 17);
-        System.out.println("Words that are longer than 5, are " + countLongWords(words));
+        System.out.println("Words that are longer than 5, are " + countLongWords(words)); //Output should be 2
+
+        // findAverage
+        float[] nums = {1.5f, 3.5f, 2.0f, 3.0f};
+        System.out.println("Average: " + findAverage(nums)); //Output should be 2.5
     }
 
     /**
@@ -67,7 +71,15 @@ public class MidtermPractice {
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
     public static double findAverage(float[] arr) {
-        return -1.0;
+        double average = 0.0;
+        double count = 0;
+        for (double num : arr) {
+            average += num;
+            count++;
+        }
+
+        average = average / count;
+        return average;
     }
 
     /**
