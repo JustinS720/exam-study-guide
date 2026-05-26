@@ -36,6 +36,13 @@ public class MidtermPractice {
         oddNums.put("x", 4);
         oddNums.put("z", 5);
         System.out.println("Odd Numbers: "  + countOddNumbers(oddNums)); //Output should be 2
+
+        // allDivisibleBy3
+        int [] int1 = {3, 6, 9};
+        int [] int2 = {3, 4, 6, 9};
+
+        System.out.println("int1 = " + allDivisibleBy3(int1)); // should be true
+        System.out.println("int2 = " + allDivisibleBy3(int2)); // should be false
     }
 
     /**
@@ -114,7 +121,13 @@ public class MidtermPractice {
      * Example 2: input: [3, 4, 6, 9] -> output: false
      */
     public static boolean allDivisibleBy3(int[] arr) {
-        return false;
+        for (int n : arr) {
+            if (n % 3 != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
