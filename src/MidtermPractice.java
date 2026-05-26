@@ -43,6 +43,21 @@ public class MidtermPractice {
 
         System.out.println("int1 = " + allDivisibleBy3(int1)); // should be true
         System.out.println("int2 = " + allDivisibleBy3(int2)); // should be false
+
+        // allStartWithA
+        List<String> a1 = new ArrayList<>();
+        a1.add("apple");
+        a1.add("apricot");
+        a1.add("avocado");
+        System.out.println("a1: " + allStartWithA(a1)); // should be true
+
+        List<String> a2 = new ArrayList<>();
+        a2.add("apple");
+        a2.add("banana");
+        a2.add("avocado");
+        System.out.println("a2: " + allStartWithA(a2)); // should be false
+
+
     }
 
     /**
@@ -138,7 +153,12 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
     public static boolean allStartWithA(List<String> list) {
-        return false;
+        for (String w : list) {
+            if (w.charAt(0) != 'a') {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
